@@ -2,7 +2,14 @@
   
 GoIndex  
 ====  
-Google Drive Directory Index  
+原GoIndex由于删裤所导致的已搭建GoIndex页面无法打开的解决方法：
+登录CF，打开workers，选中项目，修改原代码部分替换成有效的
+找到以下代码，我的是在21行
+<script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/donwa/goindex@${authConfig.version}/themes/${authConfig.theme}/app.js"></script>
+整行替换成下面（建议fork后替换成自己链接）
+<script src="//cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js,gh/guxingjinguang/goindex/themes/${authConfig.theme}/app.js"></script>
+
+Google云端硬盘目录索引  
 Combining the power of [Cloudflare Workers](https://workers.cloudflare.com/) and [Google Drive](https://www.google.com/drive/) will allow you to index you files on the browser on Cloudflare Workers.    
 
 `index.js` is the content of the Workers script.  
